@@ -81,5 +81,7 @@ function placeOrder(cardNumber) {
     console.log("Sorry, we don't have a credit card on file for you.")
   }
   else {
+    var myTotal = total();
+    console.log(`Your total cost is $${myTotal.toString()}, which will be charged to the card ${cardNumber.toString()}.`)
   }
 }
