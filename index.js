@@ -27,7 +27,7 @@ function viewCart() {
   else if (cart.length == 1){
     var myObj = cart[0];
     var retString =  `In your cart, you have ${myObj.key} at \$${myObj[myObj.key]}.`
-    console.log(retString)
+    console.log("Hello")
   }
   else {
     var retString = "In your cart, "
@@ -47,7 +47,6 @@ function total() {
 function removeFromCart(item) {
   if (cart.hasOwnProperty(item)){
       var index = cart.findIndex(item);
-      alert("yes")
       cart.splice(index, 1);
       return cart;
     } else {
