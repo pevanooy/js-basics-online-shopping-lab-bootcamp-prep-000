@@ -28,6 +28,7 @@ function viewCart() {
     var myObj = cart[0];
     var retString =  `In your cart, you have ${myObj.key} at \$${myObj[myObj.key]}.`
     console.log(retString)
+    return retString
   }
   else {
     var retString = "In your cart, "
