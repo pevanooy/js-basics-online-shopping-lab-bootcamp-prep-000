@@ -26,7 +26,6 @@ function viewCart() {
   }
   else if (cart.length == 1){
     var myObj = cart[0];
-    //var retString =  "In your cart, you have " + myObj.key + " at $" + myObj[myObj.key] + "."
     var retString =  `In your cart, you have ${Object.keys(myObj)[0]} at $${myObj[Object.keys(myObj)[0]]}.`
     console.log(retString)
   }
@@ -34,7 +33,7 @@ function viewCart() {
     var retString = "In your cart, "
     for (var i=0; i < cart.length; i++){
         var myObj = cart[i];
-        retString = retString + `you have ${myObj.key} at \$${myObj[myObj.key]}, and `
+        retString = retString + `you have ${Object.keys(myObj)[0]} at \$${myObj[Object.keys(myObj)[0]]}, and `
     }
     retString = retString.slice(0,-6) + "."
     console.log(retString)
