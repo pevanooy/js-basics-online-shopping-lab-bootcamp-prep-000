@@ -28,7 +28,7 @@ function viewCart() {
     var retString = "In your cart, "
     for (var i=0; i < cart.length; i++){
         var myObj = cart[i];
-        retString = retString + `you have ${myObj.key} at ${myObj[myObj.key]}, and `
+        retString = retString + `you have ${myObj.key} at \$${myObj[myObj.key]}, and `
     }
     retString = retString.slice(0,-6) + "."
     console.log(retString)
