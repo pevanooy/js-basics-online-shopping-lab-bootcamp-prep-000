@@ -26,9 +26,9 @@ function viewCart() {
   }
   else if (cart.length == 1){
     var myObj = cart[0];
-    var retString =  "In your cart, you have " + myObj.key + " at $" + myObj[myObj.key] + "."
-    //var retString =  `In your cart, you have ${myObj.key} at $${myObj[myObj.key]}.`
-    console.log(myObj.key)
+    //var retString =  "In your cart, you have " + myObj.key + " at $" + myObj[myObj.key] + "."
+    var retString =  `In your cart, you have ${Object.keys(myObj)[0]} at $${myObj[Object.keys(myObj)[0]]}.`
+    console.log(retSring)
   }
   else {
     var retString = "In your cart, "
