@@ -27,7 +27,7 @@ function viewCart() {
   else if (cart.length == 1){
     var myObj = cart[0];
     var retString =  `In your cart, you have ${myObj.key} at $${myObj[myObj.key]}.`
-    console.log(retString)
+    console.log(myObj.key)
   }
   else {
     var retString = "In your cart, "
