@@ -22,6 +22,16 @@ function viewCart() {
   // write your code here
   if (cart.length == 0){
       console.log("Your shopping cart is empty.");
+      return
+  }
+  else {
+    var retString = "In your cart, "
+    for (var i=0; i < cart.length; i++){
+        var myObj = cart[i];
+        retString = retString + `you have ${myObj.key} at ${myobj[myObj.key]}, and `
+    }
+    retString = retString.slice(0,-6) + "."
+    console.log(retString)
   }
 }
 
