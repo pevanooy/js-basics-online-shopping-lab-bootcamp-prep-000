@@ -33,9 +33,9 @@ function viewCart() {
     var retString = "In your cart, you have "
     for (var i=0; i < cart.length; i++){
         var myObj = cart[i];
-        retString = retString + `${Object.keys(myObj)[0]} at \$${myObj[Object.keys(myObj)[0]]}, and `
+        retString = retString + `${Object.keys(myObj)[0]} at \$${myObj[Object.keys(myObj)[0]]} and `
     }
-    retString = retString.slice(0,-6) + "."
+    retString = retString.slice(0,-5) + "."
     console.log(retString)
   }
 }
