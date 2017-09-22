@@ -24,6 +24,11 @@ function viewCart() {
       console.log("Your shopping cart is empty.");
       return
   }
+  else if (cart.length == 1){
+    var myObj = cart[1];
+    var retString =  + `In your cart, you have ${myObj.key} at \$${myObj[myObj.key]}.`
+    console.log(retString)
+  }
   else {
     var retString = "In your cart, "
     for (var i=0; i < cart.length; i++){
