@@ -29,14 +29,26 @@ function viewCart() {
     var retString =  `In your cart, you have ${Object.keys(myObj)[0]} at $${myObj[Object.keys(myObj)[0]]}.`
     console.log(retString)
   }
-  else {
+  else if (cart.length == 2){
     var retString = "In your cart, you have "
     for (var i=0; i < cart.length; i++){
         var myObj = cart[i];
         retString = retString + `${Object.keys(myObj)[0]} at \$${myObj[Object.keys(myObj)[0]]} and `
+      }
+      retString = retString.slice(0,-5) + "."
+      console.log(retString)
     }
-    retString = retString.slice(0,-5) + "."
-    console.log(retString)
+    else {
+      var cartSize = cart.length
+      var LastItemIndex = cartSize - 1
+      var retString = "In your cart, you have "
+      for (var i=0; i < LastItemIndex; i++){
+          var myObj = cart[i];
+          retString = retString + `${Object.keys(myObj)[0]} at \$${myObj[Object.keys(myObj)[0]]}, `
+      }
+      myObj = cart[LastItemIndex]
+      retString = retString + `and ${Object.keys(myObj)[0]} at \$${myObj[Object.keys(myObj)[0]]}.`
+      console.log(retString)
   }
 }
 
